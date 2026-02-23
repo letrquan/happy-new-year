@@ -23,6 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
             hero: "Năm mới vui vẻ nha Ní",
             garden: "Chúc Ní năm mới hát ngày càng hay. Xứng đáng có 10 ng yêu"
         },
+        "yến": {
+            hero: "Năm mới rạng rỡ nha Yến",
+            garden: "Chúc Yến năm mới vạn sự như ý, luôn xinh đẹp và tỏa sáng!"
+        },
+        "giang": {
+            hero: "Năm mới thành công nha Giang",
+            garden: "Chúc Giang một năm mới bứt phá thần tốc, vạn sự hanh thông!"
+        },
+        "vy": {
+            hero: "Năm mới thăng tiến nha Vy",
+            garden: "Chúc Vy luôn rạng rỡ, thăng tiến trong công việc và vạn sự như ý!"
+        },
         "default": {
             hero: "Bính Ngọ 2026 - Biểu tượng của sức mạnh, nhiệt huyết và sự bứt phá thần tốc.",
             garden: "Một năm mới rực rỡ, bình an và thành công đang chờ đợi phía trước!"
