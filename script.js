@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
             garden: "Chúc Ní năm mới hát ngày càng hay. Xứng đáng có 10 ng yêu"
         },
         "yến": {
-            hero: "Năm mới rạng rỡ nha Yến",
-            garden: "Chúc Yến năm mới vạn sự như ý, bớt 'ét ô ét' và tiền vào như nước, tiền ra như giọt sương mai!"
+            hero: "Năm mới rạng rỡ nha chị Yến",
+            garden: "Chúc chị Yến năm mới vạn sự như ý, bớt 'ét ô ét' và tiền vào như nước, tiền ra như giọt sương mai!"
         },
         "giang": {
             hero: "Năm mới thành công nha Giang",
