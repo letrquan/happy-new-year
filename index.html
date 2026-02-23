@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tết Bính Ngọ 2026 - Năm Ngựa Lửa Cát Tường</title>
+    <meta name="description" content="Chào mừng năm mới Bính Ngọ 2026. Chúc bạn một năm mới tràn đầy năng lượng, may mắn và thành công rực rỡ như ngọn lửa của thần mã.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="smoke-layer"></div>
+
+    <!-- Entrance Animation / Loader -->
+    <div id="entrance-overlay">
+        <div class="entrance-content">
+            <div class="horse-silhouette">
+                <svg viewBox="0 0 100 100" class="fire-horse-svg">
+                    <!-- Elegant Horse Silhouette Path -->
+                    <path class="draw-path" d="M30,80 C35,70 45,60 55,55 C65,50 80,45 85,35 C88,25 80,20 70,20 C60,20 50,30 45,40 C40,50 35,65 30,80 Z" fill="none" stroke="var(--gold)" stroke-width="2" />
+                    <path class="draw-path" d="M50,40 C55,30 65,25 75,25" fill="none" stroke="var(--gold)" stroke-width="1.5" />
+                    <path class="draw-path" d="M30,80 L20,90 M35,75 L25,85" fill="none" stroke="var(--gold)" stroke-width="2" />
+                </svg>
+            </div>
+            <h1 class="glow-text">BÍNH NGỌ 2026</h1>
+            <p class="entrance-subtext" id="entrance-welcome">Chào đón năm Mãnh Hỏa - Vạn sự hanh thông</p>
+            <button id="enter-btn">Khám Phá Vận May</button>
+        </div>
+        <div class="curtain left"></div>
+        <div class="curtain right"></div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <!-- Decorative Floating Elements -->
+        <div class="lantern-container">
+            <div class="lantern" style="--d: 1s; --l: 10%;">🏮</div>
+            <div class="lantern" style="--d: 2s; --l: 85%;">🏮</div>
+            <div class="lantern" style="--d: 3s; --l: 25%;">🏮</div>
+            <div class="lantern" style="--d: 4s; --l: 70%;">🏮</div>
+        </div>
+        <div id="blossom-container"></div>
+
+        <div class="nav-controls" id="nav-dots">
+            <div class="nav-dot active" data-index="0"></div>
+            <div class="nav-dot" data-index="1"></div>
+            <div class="nav-dot" data-index="2"></div>
+            <div class="nav-dot" data-index="3"></div>
+        </div>
+
+        <button class="next-part-btn" id="next-btn">Tiếp tục ➔</button>
+
+        <!-- Hero Section -->
+        <section id="hero" class="active">
+            <div class="mystic-orb" style="width: 400px; height: 400px; background: var(--primary-red); top: 10%; left: -10%;"></div>
+            <div class="mystic-orb" style="width: 300px; height: 300px; background: var(--gold); bottom: 10%; right: -5%; animation-delay: -5s;"></div>
+            <div class="fireworks-container" id="fireworks-canvas"></div>
+            <div class="hero-text-wrap">
+                <h2 class="year-title">Năm Ngựa Lửa</h2>
+                <h1 class="main-wish"><span id="receiver-name"></span>Vạn Sự Như Ý - Đắc Lộc Thành Công</h1>
+                <p class="hero-desc" id="custom-message">Bính Ngọ 2026 - Biểu tượng của sức mạnh, nhiệt huyết và sự bứt phá thần tốc.</p>
+            </div>
+        </section>
+
+        <!-- Fortune Game Section -->
+        <section id="fortune-game">
+            <div class="section-badge">Fun & Luck</div>
+            <h2 class="section-title">Gieo Quẻ Đầu Năm</h2>
+            <p>Lắc hũ xăm để nhận lời chúc và dự đoán vận may cho năm mới của bạn!</p>
+            
+            <div class="game-container">
+                <div class="sound-control">
+                    <button id="sound-toggle">🔊 Bật Nhạc Xuân</button>
+                </div>
+                <div id="dice-cup" class="shake-container">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3233/3233816.png" alt="Hũ xăm" class="cup-img">
+                </div>
+                <button id="shake-btn">Gieo Quẻ May Mắn</button>
+            </div>
+
+            <div id="fortune-result" class="modal hidden">
+                <div class="modal-content card">
+                    <span class="close-btn">&times;</span>
+                    <div class="result-header">Quẻ Xăm Của Bạn</div>
+                    <div id="fortune-text" class="fortune-card-text">Đang luận giải...</div>
+                    <div class="fortune-advice"></div>
+                    <button class="share-btn">Chia sẻ niềm vui</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalized Spring Garden -->
+        <section id="spring-garden">
+            <div class="section-badge">Spring Garden</div>
+            <h2 class="section-title">Vườn Xuân Của <span id="garden-name">Bạn</span></h2>
+            <p>Kéo biểu tượng ☀️ dọc theo cành cây để đánh thức mùa xuân!</p>
+            
+            <div class="garden-interactive">
+                <div class="branch-container" id="branch-container">
+                    <svg viewBox="0 0 500 300" class="branch-svg">
+                        <path d="M 0 300 Q 150 200 250 150 T 500 50" fill="none" stroke="#3e2723" stroke-width="12" stroke-linecap="round"/>
+                        <path d="M 120 220 Q 200 120 300 100" fill="none" stroke="#3e2723" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M 270 140 Q 400 100 450 150" fill="none" stroke="#3e2723" stroke-width="6" stroke-linecap="round"/>
+                    </svg>
+                    <div id="sun-orb" class="sun-orb">☀️</div>
+                    <div id="blossoms-target"></div>
+                </div>
+                
+                <div id="garden-reveal-message" class="hidden glass-container garden-scroll">
+                    <!-- JS will insert local message here -->
+                    <p id="garden-msg-text"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Year Philosophy -->
+        <section id="about">
+            <div class="glass-container">
+                <h3>Vận Niên Bính Ngọ 2026</h3>
+                <p>Năm nay mang hình tượng của <b>Thiên Hà Thủy</b> (Nước trên trời) gặp <b>Bính Ngọ</b> (Ngựa Lửa). Đây là sự kết hợp hiếm hoi giữa cái nóng nhiệt huyết và cái mát lành của cam lộ, hứa hẹn một năm của sự điều hòa và phát triển bền vững.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Chào Xuân Bính Ngọ. Chúc mừng năm mới!</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
